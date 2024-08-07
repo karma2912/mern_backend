@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const database = process.env.DB_HOST
+const port = process.env.DB_PORT
 console.log(database)
+console.log(port)
 const mongoURI = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}`
 
 const connectToMongo = async () => {
