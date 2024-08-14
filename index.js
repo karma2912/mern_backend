@@ -12,6 +12,8 @@ connectToMongo();
 
 app.use(express.json())
 
+app.use("/api/auth", require("./routes/auth"))
+
 //WP EASY QUESTIONS
 app.post("/question",async (req,res)=>{
     try {
