@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require("../models/wp/User")
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
-const fetchUser = require("../middleware/fetchUser")
+const fetchuser = require("../middleware/fetchuser")
 const jwt = require('jsonwebtoken');
 const jwtSecret = "Karma$29"
 
@@ -77,7 +77,7 @@ router.post ("/registeruser" , [
   });
 
   // Route 3 - Fetching the users credentials
-  router.post ("/getuser" , fetchUser , async (req,res)=>{
+  router.post ("/getuser" , fetchuser , async (req,res)=>{
    try {
       console.log(req.user.id)
       userId = req.user.id;
