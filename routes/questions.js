@@ -4,7 +4,6 @@ const question = require('../models/wp/Questions')
 const wpMquestion = require("../models/wp/WpMquestions"); 
 const wpHquestion = require("../models/wp/WpHquestions"); 
 
-console.log(question)
 //WP EASY QUESTIONS
 router.post("/question",async (req,res)=>{
    try {

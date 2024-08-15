@@ -17,7 +17,9 @@ app.get("/",(req,res)=>{
     res.send("Hello from backend Karma , This Project is single handedly Done by Karma boiii")
 })
 
-app.listen(5000,()=>{
-    console.log("Backend is running on port 5000")
+const port = process.env.PORT || 5000;
+
+app.listen(port,()=>{
+    console.log(`Backend is running on port ${port}`)
 })
 
