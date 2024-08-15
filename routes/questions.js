@@ -1,11 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const app = express()
-const question = require('../models/wp/Questions.js')
-const wpMquestion = require("../models/wp/WpMquestions.js"); 
-const wpHquestion = require("../models/wp/WpHquestions.js"); 
+const question = require('../models/wp/Questions')
+const wpMquestion = require("../models/wp/WpMquestions"); 
+const wpHquestion = require("../models/wp/WpHquestions"); 
 
-
+console.log(question)
 //WP EASY QUESTIONS
 router.post("/question",async (req,res)=>{
    try {
