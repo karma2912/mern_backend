@@ -4,7 +4,6 @@ const app = express()
 const question = require('../models/wp/Questions.js')
 const wpMquestion = require("../models/wp/WpMquestions.js"); 
 const wpHquestion = require("../models/wp/WpHquestions.js"); 
-const fetchUser = require("../middleware/fetchUser.js")
 
 
 //WP EASY QUESTIONS

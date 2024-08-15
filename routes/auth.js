@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 const express = require('express')
 const router = express.Router()
 const app = express()
 const User = require("../models/wp/User")
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
-const fetchUser = require("../middleware/fetchUser")
+const fetchuser = require("../middleware/fetchuser")
 const jwt = require('jsonwebtoken');
 const jwtSecret = "Karma$29"
 
@@ -14,59 +13,15 @@ router.get("/checking",(req,res)=>{
    console.log("Request Recieved")
    res.send("Checked")
 })
-router.post ("/registeruser" ,async (req,res)=>{
-   try {
-      const errors = validationResult(req);
-   if (!errors.isEmpty()) {
-      return res.status(400).send({ errors: errors.array()});
-   }
-   try{
-      const data = {
-         user:{
-            id: User.id
-         }
-      }
-      const token = jwt.sign(data, jwtSecret);
-      const salt =  await bcrypt.genSalt(10);
-      const hashedPass = await bcrypt.hash(req.body.password, salt);
-      let user = new User({
-         name: req.body.name,
-         email: req.body.email,
-         password: hashedPass
-      })
-      user.save()
-      res.json({token})
-   }
-   catch(error){
-      console.error(error.message)
-      res.status(500).send("Some error occured")
-   } 
-   } catch (error) {
-      res.status(500).send('An error occurred')
-   }
-
- });
-
-router.post ("/login" , [
-=======
-const express = require("express")
-const router = express.Router()
-const User = require("../models/wp/User")
-const { body, validationResult } = require('express-validator');
-const bcrypt = require('bcrypt');
-const fetchuser = require("../middleware/fetchuser")
-const jwt = require('jsonwebtoken');
-const jwtSecret = "Karma$29"
 
 router.post ("/registeruser" , [
    body('name',"Enter a valid name").isLength({min:3}),
->>>>>>> fcf26f90db82ca5d8fdcb02288e79c0f7b553f83
+
    body('email',"Enter a valid email").isEmail(),
    body("password","Enter a valid password").isLength({min:5})
 ], async (req,res)=>{
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-<<<<<<< HEAD
          return res.send("User doesn't exists")
       }
    // Accessing the stored user data in the database
@@ -97,34 +52,6 @@ catch(error){
 }
 });
 
-  // Route 3 - Fetching the users credentials
-  router.post ("/getuser" , fetchUser , async (req,res)=>{
-=======
-         return res.status(400).send({ errors: errors.array()});
-      }
-      try{
-         const data = {
-            user:{
-               id: User.id
-            }
-         }
-         const token = jwt.sign(data, jwtSecret);
-         const salt =  await bcrypt.genSalt(10);
-         const hashedPass = await bcrypt.hash(req.body.password, salt);
-         let user = new User({
-            name: req.body.name,
-            email: req.body.email,
-            password: hashedPass
-         })
-         user.save()
-         res.json({token})
-      }
-      catch(error){
-         console.error(error.message)
-         res.status(500).send("Some error occured fix it")
-      } 
-
-    });
 
    router.post ("/login" , [
       body('email',"Enter a valid email").isEmail(),
@@ -164,7 +91,6 @@ catch(error){
 
   // Route 3 - Fetching the users credentials
   router.post ("/getuser" , fetchuser , async (req,res)=>{
->>>>>>> fcf26f90db82ca5d8fdcb02288e79c0f7b553f83
    try {
       console.log(req.user.id)
       userId = req.user.id;
@@ -179,10 +105,6 @@ catch(error){
    }
   })
 
-<<<<<<< HEAD
- module.exports = router
-=======
-    
 
-module.exports = router
->>>>>>> fcf26f90db82ca5d8fdcb02288e79c0f7b553f83
+ module.exports = router
+
