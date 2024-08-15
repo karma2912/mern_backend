@@ -14,7 +14,7 @@ app.use("/api",noteRoutes)
 
 
 app.get("/",(req,res)=>{
-    res.send("Hello from backend Karma , This Project is single handedly Done by Karma boii")
+    res.send("Hello from backend Karma , This Project is single handedly Done by Karma boiii")
 })
 
 app.listen(5000,()=>{
