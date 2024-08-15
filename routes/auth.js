@@ -16,7 +16,6 @@ router.get("/checking",(req,res)=>{
 
 router.post ("/registeruser" , [
    body('name',"Enter a valid name").isLength({min:3}),
-
    body('email',"Enter a valid email").isEmail(),
    body("password","Enter a valid password").isLength({min:5})
 ], async (req,res)=>{

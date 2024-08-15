@@ -6,13 +6,8 @@ const Userschema = new Schema({
     type: String,
     required: true
   },
-  email:{
-    type: String,
-    unique: true,
-    required: true
-  },
-  password:{
-    type: String,
+  marks:{
+    type: Number,
     required: true
   },
   date:{
