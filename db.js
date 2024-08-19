@@ -3,7 +3,7 @@ const database = process.env.DB_HOST
 const port = process.env.DB_PORT
 console.log(database)
 console.log(port)
-const mongoURI = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/quizquest`
+const mongoURI = `mongodb://127.0.0.1/quizquest`
 
 const connectToMongo = async () => {
 try {
