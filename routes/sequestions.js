@@ -6,7 +6,7 @@ const seHquestion = require("../models/se/seHquestions");
 const questions = require("../models/se/seEasy.js")
 const Mquestions = require("../models/se/seModerate.js")
 const Hquestions = require("../models/se/seHard.js")
-console.log(Mquestions)
+
 //WP EASY QUESTIONS
 router.post("/sequestion",async (req,res)=>{
    try {
