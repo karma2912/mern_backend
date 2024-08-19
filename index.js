@@ -8,9 +8,13 @@ app.use(cors())
 connectToMongo();
 
 const authRoutes = require('./routes/auth.js')
-const noteRoutes = require('./routes/questions.js')
+const wpRoutes = require('./routes/questions.js')
+const seRoutes = require('./routes/sequestions.js')
+const dbRoutes = require('./routes/dbquestions.js')
 app.use("/auth",authRoutes)
-app.use("/api",noteRoutes)
+app.use("/api",wpRoutes)
+app.use("/api",seRoutes)
+app.use("/api",dbRoutes)
 
 
 app.get("/",(req,res)=>{
