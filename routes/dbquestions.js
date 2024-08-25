@@ -15,7 +15,7 @@ router.post("/dbquestion",async (req,res)=>{
    }
 })
 
-router.get("/getdbquestion",async (req,res)=>{
+router.get("/getdbEquestion",async (req,res)=>{
    try {
        let Question = await dbquestion.find({})
        res.send(Question)

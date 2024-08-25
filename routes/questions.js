@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const question = require('../models/wp/questions')
+const question = require('../models/wp/wpEquestions')
 const wpMquestion = require("../models/wp/wpMquestions"); 
 const wpHquestion = require("../models/wp/wpHquestions"); 
 
@@ -15,7 +15,7 @@ router.post("/question",async (req,res)=>{
    }
 })
 
-router.get("/getquestion",async (req,res)=>{
+router.get("/getwpEquestion",async (req,res)=>{
    try {
        let Question = await question.find({})
        res.send(Question)

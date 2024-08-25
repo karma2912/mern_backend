@@ -20,7 +20,7 @@ router.post("/sequestion",async (req,res)=>{
    }
 })
 
-router.get("/getsequestion",async (req,res)=>{
+router.get("/getseEquestion",async (req,res)=>{
    try {
        let Question = await sequestion.find({})
        res.send(Question)
