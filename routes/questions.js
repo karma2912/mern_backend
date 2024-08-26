@@ -3,11 +3,12 @@ const router = express.Router()
 const question = require('../models/wp/wpEquestions')
 const wpMquestion = require("../models/wp/wpMquestions"); 
 const wpHquestion = require("../models/wp/wpHquestions"); 
+const questions = require("../models/wp/wpEasy")
 
 //WP EASY QUESTIONS
 router.post("/question",async (req,res)=>{
    try {
-       let Question = await question.create(req.body)
+       let Question = await question.insertMany(questions)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
