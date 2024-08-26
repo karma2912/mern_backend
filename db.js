@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const database = process.env.DB_HOST
+const database = process.env.MONGO_URI
 const port = process.env.DB_PORT
 console.log(database)
 console.log(port)
-const mongoURI = `mongodb+srv://rajakyash23:5po6nmCGVR4PdhF4@quizquest.jif67.mongodb.net/quizquest`
+const mongoURI = `${database}`
 
 const connectToMongo = async () => {
 try {
