@@ -19,36 +19,32 @@ router.post ("/registeruser" , [
    body('email',"Enter a valid email").isEmail(),
    body("password","Enter a valid password").isLength({min:5})
 ], async (req,res)=>{
-      const errors = validationResult(req);
-      if (!errors.isEmpty()) {
-         return res.send("User doesn't exists")
-      }
-   // Accessing the stored user data in the database
-   const {email,password} = req.body
-try{
-   let user = await User.findOne({email})
-   if(!user){
-      return res.send("User doesn't exists")
+   const errors = validationResult(req);
+   if (!errors.isEmpty()) {
+      return res.status(400).send({ errors: errors.array()});
    }
-   // Comparing the password of the user with the password stored
-   const comparedPass = await bcrypt.compare(password,user.password)
-   if(!comparedPass){
-      return res.send("User Credentials doesn't matched")
-      }
-   // Giving the id of user in an object
+   try{
       const data = {
          user:{
-            id: user.id
+            id: User.id
          }
       }
       const token = jwt.sign(data, jwtSecret);
+      const salt =  await bcrypt.genSalt(10);
+      const hashedPass = await bcrypt.hash(req.body.password, salt);
+      let user = new User({
+         name: req.body.name,
+         email: req.body.email,
+         password: hashedPass
+      })
+      user.save()
       res.json({token})
    }
-   
-catch(error){
-   console.error(error.message)
-   res.status(500).send("Some error occured")
-}
+   catch(error){
+      console.error(error.message)
+      res.status(500).send("Some error occured")
+   } 
+
 });
 
 
