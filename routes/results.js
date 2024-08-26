@@ -7,11 +7,13 @@ const fetchUser = require("../middleware/fetchUser");
 //Route 1 to Add a new note http://localhost:5000/results/addresults
 router.post("/addresult", fetchUser, async (req, res) => {
    console.log(req.body.subject_type)
+   console.log(req.body.image)
   try {
     const result = new Results({
       subject_name: req.body.subject_name,
       subject_type: req.body.subject_type,
       marks: req.body.marks,
+      image: req.body.image,
       user: req.user.id,
     });
     const savedResult = await result.save();

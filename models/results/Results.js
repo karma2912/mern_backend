@@ -19,6 +19,10 @@ const resultschema = new Schema({
     required: true,
     default: "general"
   },
+  image:{
+    type: String,
+    required:true,
+  },
   date:{
     type: Date,
     default: Date.now
