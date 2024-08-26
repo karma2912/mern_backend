@@ -1,19 +1,23 @@
 const mongoose = require('mongoose');
-const database = process.env.MONGO_URI
-const port = process.env.DB_PORT
-console.log(database)
-console.log(port)
-const mongoURI = `${database}`
+
+// Load connection string from environment variable
+const mongoURI = process.env.MONGO_URI;
 
 const connectToMongo = async () => {
-try {
-    mongoose.set('strictQuery', false)
-    mongoose.connect(mongoURI) 
-    console.log('Mongo connected karma')
-}
-catch(error) {
-    console.log(error)
-    process.exit() 
-}
-}
+  try {
+    // Set Mongoose options to avoid deprecation warnings
+    mongoose.set('strictQuery', false);
+
+    // Connect to MongoDB
+    await mongoose.connect(mongoURI);
+
+    console.log('MongoDB connected successfully');
+  } catch (error) {
+    console.error('MongoDB connection error:', error);
+    // Optionally, you can exit the process if needed
+    // process.exit(1);
+  }
+};
+
+// Export the connection function
 module.exports = connectToMongo;
