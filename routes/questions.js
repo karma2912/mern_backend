@@ -4,6 +4,8 @@ const question = require('../models/wp/wpEquestions')
 const wpMquestion = require("../models/wp/wpMquestions"); 
 const wpHquestion = require("../models/wp/wpHquestions"); 
 const questions = require("../models/wp/wpEasy")
+const Mquestions = require("../models/wp/wpModerate")
+const Hquestions = require("../models/wp/wpHard")
 
 //WP EASY QUESTIONS
 router.post("/question",async (req,res)=>{
@@ -30,7 +32,7 @@ router.get("/getwpEquestion",async (req,res)=>{
 //WP MODERATE QUESTIONS
 router.post("/wpMquestion",async (req,res)=>{
    try {
-       let Question = await wpMquestion.create(req.body)
+       let Question = await wpMquestion.insertMany(Mquestions)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
@@ -52,7 +54,7 @@ router.get("/getwpMquestion",async (req,res)=>{
 //WP Hard QUESTIONS
 router.post("/wpHquestion",async (req,res)=>{
    try {
-       let Question = await wpHquestion.create(req.body)
+       let Question = await wpHquestion.insertMany(Hquestions)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
