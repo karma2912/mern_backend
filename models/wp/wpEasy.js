@@ -356,6 +356,226 @@ const quest = [{
       "answer_d": "Finds the index of an element in the array"
     },
     "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 31,
+    "Question": "Which HTML tag is used to define a block of text that is displayed in bold?",
+    "Answers": { 
+      "answer_a": "<b>", 
+      "answer_b": "<strong>", 
+      "answer_c": "<bold>", 
+      "answer_d": "<em>"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 32,
+    "Question": "What does the `float` property in CSS do?",
+    "Answers": { 
+      "answer_a": "Moves elements to the left or right", 
+      "answer_b": "Adjusts element's opacity", 
+      "answer_c": "Sets the font size", 
+      "answer_d": "Controls the element's margin"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 33,
+    "Question": "Which HTML attribute specifies how a form should be submitted?",
+    "Answers": { 
+      "answer_a": "method", 
+      "answer_b": "action", 
+      "answer_c": "submit", 
+      "answer_d": "type"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 34,
+    "Question": "How do you access the first element in an array in JavaScript?",
+    "Answers": { 
+      "answer_a": "array[0]", 
+      "answer_b": "array.first()", 
+      "answer_c": "array.get(1)", 
+      "answer_d": "array.firstElement()"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 35,
+    "Question": "What does the `:hover` pseudo-class do in CSS?",
+    "Answers": { 
+      "answer_a": "Applies styles when the mouse hovers over an element", 
+      "answer_b": "Applies styles when the element is clicked", 
+      "answer_c": "Applies styles when the element is focused", 
+      "answer_d": "Applies styles when the element is active"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 36,
+    "Question": "Which HTML element is used to define a list item?",
+    "Answers": { 
+      "answer_a": "<li>", 
+      "answer_b": "<item>", 
+      "answer_c": "<list-item>", 
+      "answer_d": "<ol-item>"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 37,
+    "Question": "How do you add a comment in CSS?",
+    "Answers": { 
+      "answer_a": "/* This is a comment */", 
+      "answer_b": "// This is a comment", 
+      "answer_c": "<!-- This is a comment -->", 
+      "answer_d": "# This is a comment"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 38,
+    "Question": "What does the `display: none;` CSS property do?",
+    "Answers": { 
+      "answer_a": "Hides the element from the page", 
+      "answer_b": "Makes the element transparent", 
+      "answer_c": "Removes the element's border", 
+      "answer_d": "Collapses the element's margin"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 39,
+    "Question": "Which JavaScript method is used to get the length of an array?",
+    "Answers": { 
+      "answer_a": "length", 
+      "answer_b": "size()", 
+      "answer_c": "count()", 
+      "answer_d": "getLength()"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 40,
+    "Question": "What HTML element is used to define a table cell?",
+    "Answers": { 
+      "answer_a": "<td>", 
+      "answer_b": "<cell>", 
+      "answer_c": "<tr>", 
+      "answer_d": "<table-cell>"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 41,
+    "Question": "Which CSS property is used to change the spacing between lines of text?",
+    "Answers": { 
+      "answer_a": "line-height", 
+      "answer_b": "letter-spacing", 
+      "answer_c": "word-spacing", 
+      "answer_d": "text-spacing"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 42,
+    "Question": "How do you specify an external stylesheet in HTML?",
+    "Answers": { 
+      "answer_a": "<link rel='stylesheet' href='styles.css'>", 
+      "answer_b": "<style src='styles.css'>", 
+      "answer_c": "<script href='styles.css'></script>", 
+      "answer_d": "<include href='styles.css'></include>"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 43,
+    "Question": "Which HTML element is used to define a header cell in a table?",
+    "Answers": { 
+      "answer_a": "<th>", 
+      "answer_b": "<td>", 
+      "answer_c": "<tr>", 
+      "answer_d": "<header>"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 44,
+    "Question": "What is the purpose of the `for` attribute in a <label> tag?",
+    "Answers": { 
+      "answer_a": "Associates the label with a specific form element", 
+      "answer_b": "Defines the label's font size", 
+      "answer_c": "Specifies the label's background color", 
+      "answer_d": "Sets the label's position"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 45,
+    "Question": "Which JavaScript method converts a string to lowercase?",
+    "Answers": { 
+      "answer_a": "toLowerCase()", 
+      "answer_b": "convertToLower()", 
+      "answer_c": "makeLower()", 
+      "answer_d": "stringLower()"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 46,
+    "Question": "What is the default value of the `position` property in CSS?",
+    "Answers": { 
+      "answer_a": "static", 
+      "answer_b": "relative", 
+      "answer_c": "absolute", 
+      "answer_d": "fixed"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 47,
+    "Question": "Which HTML tag is used to display a horizontal line?",
+    "Answers": { 
+      "answer_a": "<hr>", 
+      "answer_b": "<line>", 
+      "answer_c": "<horizontal>", 
+      "answer_d": "<divider>"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 48,
+    "Question": "What does the `text-transform` CSS property do?",
+    "Answers": { 
+      "answer_a": "Controls the capitalization of text", 
+      "answer_b": "Adjusts the text color", 
+      "answer_c": "Sets the text alignment", 
+      "answer_d": "Changes the text font"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 49,
+    "Question": "How do you concatenate two strings in JavaScript?",
+    "Answers": { 
+      "answer_a": "string1 + string2", 
+      "answer_b": "string1.concat(string2)", 
+      "answer_c": "string1.append(string2)", 
+      "answer_d": "string1.join(string2)"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 50,
+    "Question": "Which HTML attribute specifies the URL of the page a link goes to?",
+    "Answers": { 
+      "answer_a": "href", 
+      "answer_b": "src", 
+      "answer_c": "link", 
+      "answer_d": "destination"
+    },
+    "correct_answer": "answer_a"
   }]
 
   module.exports = quest
