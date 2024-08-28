@@ -4,7 +4,7 @@ const connectToMongo = require("./db.js")
 var cors = require('cors')
 const app = express()
 app.use(express.json())
-app.use(cors());
+app.use(cors("https://66cefcd03dd952000844cc61--gentle-panda-ef79d1.netlify.app/"));
 connectToMongo();
 
 const authRoutes = require('./routes/auth.js')
