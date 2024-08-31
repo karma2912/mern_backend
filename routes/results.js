@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Results = require("../models/results/Results");
-const { body, validationResult } = require("express-validator");
-const fetchUser = require("../middleware/fetchUser");
+const fetchUser = require("../middleware/fetchuser")
 
 //Route 1 to Add a new note http://localhost:5000/results/addresults
 router.post("/addresult", fetchUser, async (req, res) => {

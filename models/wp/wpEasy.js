@@ -1,581 +1,554 @@
-const quest = [{   
+const quest = [
+  {
     "Qid": 1,
-    "Question": "Which HTML tag is used to define the title of an HTML document?",
-    "Answers": { 
-      "answer_a": "<header>", 
-      "answer_b": "<body>", 
-      "answer_c": "<footer>", 
-      "answer_d": "<title>"
+    "Question": "Which HTML tag defines a clickable link?",
+    "Answers": {
+      "answer_a": "<link>",
+      "answer_b": "<a>",
+      "answer_c": "<href>",
+      "answer_d": "<url>"
     },
-    "correct_answer": "answer_d"
+    "correct_answer": "answer_b"
   },
-  
-  {   
+  {
     "Qid": 2,
-    "Question": "Which CSS property is used to change the background color of an element?",
-    "Answers": { 
-      "answer_a": "color", 
-      "answer_b": "background-color", 
-      "answer_c": "border-color", 
-      "answer_d": "text-color"
+    "Question": "How to make text bold in HTML?",
+    "Answers": {
+      "answer_a": "<b>",
+      "answer_b": "<strong>",
+      "answer_c": "<bold>",
+      "answer_d": "<font-weight>"
     },
     "correct_answer": "answer_b"
   },
-  
-  {   
+  {
     "Qid": 3,
-    "Question": "What is the correct HTML element for inserting a line break?",
-    "Answers": { 
-      "answer_a": "<break>", 
-      "answer_b": "<br>", 
-      "answer_c": "<hr>", 
-      "answer_d": "<line>"
+    "Question": "Tag used to display images?",
+    "Answers": {
+      "answer_a": "<img>",
+      "answer_b": "<picture>",
+      "answer_c": "<image>",
+      "answer_d": "<src>"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 4,
-    "Question": "How do you declare a variable in JavaScript?",
-    "Answers": { 
-      "answer_a": "var variableName;", 
-      "answer_b": "let variableName;", 
-      "answer_c": "const variableName;", 
-      "answer_d": "All of the above"
+    "Question": "How to create a form in HTML?",
+    "Answers": {
+      "answer_a": "<form>",
+      "answer_b": "<input>",
+      "answer_c": "<submit>",
+      "answer_d": "<field>"
     },
-    "correct_answer": "answer_d"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 5,
-    "Question": "Which HTML tag is used to define an unordered list?",
-    "Answers": { 
-      "answer_a": "<ol>", 
-      "answer_b": "<ul>", 
-      "answer_c": "<li>", 
-      "answer_d": "<list>"
+    "Question": "Attribute for image description?",
+    "Answers": {
+      "answer_a": "alt",
+      "answer_b": "title",
+      "answer_c": "desc",
+      "answer_d": "text"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 6,
-    "Question": "What does CSS stand for?",
-    "Answers": { 
-      "answer_a": "Computer Style Sheets", 
-      "answer_b": "Cascading Style Sheets", 
-      "answer_c": "Creative Style Sheets", 
-      "answer_d": "Colorful Style Sheets"
+    "Question": "CSS property to center text?",
+    "Answers": {
+      "answer_a": "text-align: center;",
+      "answer_b": "align: center;",
+      "answer_c": "center: text;",
+      "answer_d": "text-center;"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 7,
-    "Question": "Which JavaScript method is used to add an element to the end of an array?",
-    "Answers": { 
-      "answer_a": "push()", 
-      "answer_b": "pop()", 
-      "answer_c": "shift()", 
-      "answer_d": "unshift()"
+    "Question": "CSS property for background color?",
+    "Answers": {
+      "answer_a": "background-color:",
+      "answer_b": "bg-color:",
+      "answer_c": "color:",
+      "answer_d": "background:"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 8,
-    "Question": "What is the purpose of the 'alt' attribute in an HTML <img> tag?",
-    "Answers": { 
-      "answer_a": "To provide alternative text if the image cannot be displayed", 
-      "answer_b": "To specify the alignment of the image", 
-      "answer_c": "To set the image size", 
-      "answer_d": "To add a border around the image"
+    "Question": "How to add a border in CSS?",
+    "Answers": {
+      "answer_a": "border:",
+      "answer_b": "outline:",
+      "answer_c": "frame:",
+      "answer_d": "edge:"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 9,
-    "Question": "What does the 'float' property do in CSS?",
-    "Answers": { 
-      "answer_a": "Moves an element to the left or right", 
-      "answer_b": "Sets the transparency of an element", 
-      "answer_c": "Changes the font size of an element", 
-      "answer_d": "Aligns text within an element"
+    "Question": "How to select all paragraphs in CSS?",
+    "Answers": {
+      "answer_a": "p {}",
+      "answer_b": ".p {}",
+      "answer_c": "#p {}",
+      "answer_d": "paragraph {}"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 10,
-    "Question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-    "Answers": { 
-      "answer_a": "title", 
-      "answer_b": "alt", 
-      "answer_c": "src", 
-      "answer_d": "href"
+    "Question": "What is used for responsive design?",
+    "Answers": {
+      "answer_a": "media queries",
+      "answer_b": "flexbox",
+      "answer_c": "grid",
+      "answer_d": "transitions"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 11,
-    "Question": "What is the default value of the 'position' property in CSS?",
-    "Answers": { 
-      "answer_a": "absolute", 
-      "answer_b": "fixed", 
-      "answer_c": "relative", 
-      "answer_d": "static"
+    "Question": "How to define a function in JavaScript?",
+    "Answers": {
+      "answer_a": "function myFunction() {}",
+      "answer_b": "def myFunction() {}",
+      "answer_c": "func myFunction() {}",
+      "answer_d": "function: myFunction() {}"
     },
-    "correct_answer": "answer_d"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 12,
-    "Question": "Which CSS property is used to change the text color of an element?",
-    "Answers": { 
-      "answer_a": "font-size", 
-      "answer_b": "text-align", 
-      "answer_c": "color", 
-      "answer_d": "background-color"
+    "Question": "How to output data in JavaScript?",
+    "Answers": {
+      "answer_a": "console.log()",
+      "answer_b": "print()",
+      "answer_c": "alert()",
+      "answer_d": "write()"
     },
-    "correct_answer": "answer_c"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 13,
-    "Question": "What is the correct HTML element for defining important text?",
-    "Answers": { 
-      "answer_a": "<strong>", 
-      "answer_b": "<b>", 
-      "answer_c": "<em>", 
-      "answer_d": "<i>"
+    "Question": "What keyword declares a variable in JS?",
+    "Answers": {
+      "answer_a": "let",
+      "answer_b": "var",
+      "answer_c": "const",
+      "answer_d": "define"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 14,
-    "Question": "How can you add a comment in a JavaScript file?",
-    "Answers": { 
-      "answer_a": "// This is a comment", 
-      "answer_b": "/* This is a comment */", 
-      "answer_c": "# This is a comment", 
-      "answer_d": "<!-- This is a comment -->"
+    "Question": "How to create a class in JavaScript?",
+    "Answers": {
+      "answer_a": "class MyClass {}",
+      "answer_b": "create class MyClass {}",
+      "answer_c": "class: MyClass {}",
+      "answer_d": "define MyClass {}"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 15,
-    "Question": "What does the 'z-index' property do in CSS?",
-    "Answers": { 
-      "answer_a": "Controls the stacking order of elements", 
-      "answer_b": "Sets the opacity level", 
-      "answer_c": "Adjusts the width of an element", 
-      "answer_d": "Changes the font size"
+    "Question": "How to import a module in Node.js?",
+    "Answers": {
+      "answer_a": "require('module')",
+      "answer_b": "import 'module'",
+      "answer_c": "include 'module'",
+      "answer_d": "load 'module'"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 16,
-    "Question": "Which HTML tag is used to define a hyperlink?",
-    "Answers": { 
-      "answer_a": "<link>", 
-      "answer_b": "<a>", 
-      "answer_c": "<href>", 
-      "answer_d": "<hyperlink>"
+    "Question": "What method reads files in Node.js?",
+    "Answers": {
+      "answer_a": "fs.readFile()",
+      "answer_b": "fs.open()",
+      "answer_c": "fs.read()",
+      "answer_d": "fs.load()"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 17,
-    "Question": "What is the purpose of the 'data-*' attributes in HTML5?",
-    "Answers": { 
-      "answer_a": "To store custom data for JavaScript", 
-      "answer_b": "To add metadata to the document", 
-      "answer_c": "To style elements with CSS", 
-      "answer_d": "To define user roles"
+    "Question": "How to start an Express server?",
+    "Answers": {
+      "answer_a": "app.listen()",
+      "answer_b": "server.start()",
+      "answer_c": "app.run()",
+      "answer_d": "server.listen()"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 18,
-    "Question": "What is the purpose of the 'this' keyword in JavaScript?",
-    "Answers": { 
-      "answer_a": "Refers to the current object", 
-      "answer_b": "Declares a new variable", 
-      "answer_c": "Creates a new function", 
-      "answer_d": "Sets the scope of a variable"
+    "Question": "How to parse JSON in JavaScript?",
+    "Answers": {
+      "answer_a": "JSON.parse()",
+      "answer_b": "JSON.decode()",
+      "answer_c": "JSON.load()",
+      "answer_d": "JSON.read()"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 19,
-    "Question": "Which attribute is used to specify the character encoding in an HTML document?",
-    "Answers": { 
-      "answer_a": "charset", 
-      "answer_b": "encoding", 
-      "answer_c": "type", 
-      "answer_d": "content"
+    "Question": "How to create an HTTP request in JavaScript?",
+    "Answers": {
+      "answer_a": "fetch()",
+      "answer_b": "request()",
+      "answer_c": "get()",
+      "answer_d": "axios()"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 20,
-    "Question": "How do you add a background image to a web page using CSS?",
-    "Answers": { 
-      "answer_a": "background-image: url('image.jpg');", 
-      "answer_b": "image-background: url('image.jpg');", 
-      "answer_c": "background: url('image.jpg');", 
-      "answer_d": "img-background: url('image.jpg');"
+    "Question": "What does PHP stand for?",
+    "Answers": {
+      "answer_a": "Hypertext Preprocessor",
+      "answer_b": "Hypertext Programming",
+      "answer_c": "Preprocessor Hypertext",
+      "answer_d": "Personal Home Page"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 21,
-    "Question": "What is the use of the 'preventDefault()' method in JavaScript?",
-    "Answers": { 
-      "answer_a": "To prevent the default action of an event", 
-      "answer_b": "To force a form submission", 
-      "answer_c": "To add a new element to the DOM", 
-      "answer_d": "To update the content of an element"
+    "Question": "How to start a PHP script?",
+    "Answers": {
+      "answer_a": "<?php",
+      "answer_b": "<php>",
+      "answer_c": "<script>",
+      "answer_d": "<?script"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 22,
-    "Question": "Which CSS property controls the text size of an element?",
-    "Answers": { 
-      "answer_a": "font-size", 
-      "answer_b": "text-size", 
-      "answer_c": "text-style", 
-      "answer_d": "font-style"
+    "Question": "How to echo in PHP?",
+    "Answers": {
+      "answer_a": "echo",
+      "answer_b": "print",
+      "answer_c": "output",
+      "answer_d": "write"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 23,
-    "Question": "What is the purpose of the 'src' attribute in the <img> tag?",
-    "Answers": { 
-      "answer_a": "Specifies the URL of the image", 
-      "answer_b": "Specifies the image width", 
-      "answer_c": "Specifies the image height", 
-      "answer_d": "Specifies the image border"
+    "Question": "How to include a PHP file?",
+    "Answers": {
+      "answer_a": "include 'file.php';",
+      "answer_b": "require 'file.php';",
+      "answer_c": "import 'file.php';",
+      "answer_d": "load 'file.php';"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 24,
-    "Question": "Which HTML element defines a table row?",
-    "Answers": { 
-      "answer_a": "<td>", 
-      "answer_b": "<tr>", 
-      "answer_c": "<th>", 
-      "answer_d": "<table>"
+    "Question": "How to connect to a database in PHP?",
+    "Answers": {
+      "answer_a": "mysqli_connect()",
+      "answer_b": "db_connect()",
+      "answer_c": "connect_db()",
+      "answer_d": "open_connection()"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 25,
-    "Question": "Which property in CSS is used to control the visibility of an element?",
-    "Answers": { 
-      "answer_a": "visibility", 
-      "answer_b": "display", 
-      "answer_c": "opacity", 
-      "answer_d": "position"
+    "Question": "How to set a session variable in PHP?",
+    "Answers": {
+      "answer_a": "$_SESSION['key'] = 'value';",
+      "answer_b": "$SESSION['key'] = 'value';",
+      "answer_c": "session['key'] = 'value';",
+      "answer_d": "set_session('key', 'value');"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 26,
-    "Question": "What is the purpose of the 'innerHTML' property in JavaScript?",
-    "Answers": { 
-      "answer_a": "To get or set the HTML content of an element", 
-      "answer_b": "To set the CSS styles of an element", 
-      "answer_c": "To retrieve the text content of an element", 
-      "answer_d": "To change the element's attributes"
+    "Question": "How to comment in CSS?",
+    "Answers": {
+      "answer_a": "/* comment */",
+      "answer_b": "// comment",
+      "answer_c": "# comment",
+      "answer_d": "<!-- comment -->"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 27,
-    "Question": "Which HTML element is used to create a form?",
-    "Answers": { 
-      "answer_a": "<form>", 
-      "answer_b": "<input>", 
-      "answer_c": "<fieldset>", 
-      "answer_d": "<form-data>"
+    "Question": "How to hide an element with CSS?",
+    "Answers": {
+      "answer_a": "display: none;",
+      "answer_b": "visibility: hidden;",
+      "answer_c": "opacity: 0;",
+      "answer_d": "hide: true;"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 28,
-    "Question": "How can you select an element with the ID 'header' in CSS?",
-    "Answers": { 
-      "answer_a": "#header", 
-      "answer_b": ".header", 
-      "answer_c": "header", 
-      "answer_d": "*header"
+    "Question": "How to apply a class in HTML?",
+    "Answers": {
+      "answer_a": "class='classname'",
+      "answer_b": "class='classname;'",
+      "answer_c": "id='classname'",
+      "answer_d": "className='classname'"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 29,
-    "Question": "Which JavaScript function is used to execute code after a specified delay?",
-    "Answers": { 
-      "answer_a": "setTimeout()", 
-      "answer_b": "setInterval()", 
-      "answer_c": "clearTimeout()", 
-      "answer_d": "clearInterval()"
+    "Question": "CSS property for font size?",
+    "Answers": {
+      "answer_a": "font-size:",
+      "answer_b": "text-size:",
+      "answer_c": "size:",
+      "answer_d": "font:"
     },
     "correct_answer": "answer_a"
   },
-  
-  {   
+  {
     "Qid": 30,
-    "Question": "What does the 'map()' method do in JavaScript arrays?",
-    "Answers": { 
-      "answer_a": "Creates a new array with the results of calling a function for every array element", 
-      "answer_b": "Removes elements from an array", 
-      "answer_c": "Sorts the elements of an array", 
-      "answer_d": "Finds the index of an element in the array"
+    "Question": "How to make text italic in CSS?",
+    "Answers": {
+      "answer_a": "font-style: italic;",
+      "answer_b": "text-style: italic;",
+      "answer_c": "font-weight: italic;",
+      "answer_d": "text-decoration: italic;"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 31,
-    "Question": "Which HTML tag is used to define a block of text that is displayed in bold?",
-    "Answers": { 
-      "answer_a": "<b>", 
-      "answer_b": "<strong>", 
-      "answer_c": "<bold>", 
-      "answer_d": "<em>"
+    "Question": "What does `alert()` do in JS?",
+    "Answers": {
+      "answer_a": "Displays a popup",
+      "answer_b": "Logs to console",
+      "answer_c": "Writes to document",
+      "answer_d": "Shows notification"
     },
-    "correct_answer": "answer_b"
+    "correct_answer": "answer_a"
   },
   {
     "Qid": 32,
-    "Question": "What does the `float` property in CSS do?",
-    "Answers": { 
-      "answer_a": "Moves elements to the left or right", 
-      "answer_b": "Adjusts element's opacity", 
-      "answer_c": "Sets the font size", 
-      "answer_d": "Controls the element's margin"
+    "Question": "How to define a constant in JS?",
+    "Answers": {
+      "answer_a": "const NAME = value;",
+      "answer_b": "let NAME = value;",
+      "answer_c": "var NAME = value;",
+      "answer_d": "define NAME = value;"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 33,
-    "Question": "Which HTML attribute specifies how a form should be submitted?",
-    "Answers": { 
-      "answer_a": "method", 
-      "answer_b": "action", 
-      "answer_c": "submit", 
-      "answer_d": "type"
+    "Question": "How to add a comment in JS?",
+    "Answers": {
+      "answer_a": "// comment",
+      "answer_b": "/* comment */",
+      "answer_c": "<!-- comment -->",
+      "answer_d": "# comment"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 34,
-    "Question": "How do you access the first element in an array in JavaScript?",
-    "Answers": { 
-      "answer_a": "array[0]", 
-      "answer_b": "array.first()", 
-      "answer_c": "array.get(1)", 
-      "answer_d": "array.firstElement()"
+    "Question": "JS method to convert to string?",
+    "Answers": {
+      "answer_a": "toString()",
+      "answer_b": "convert()",
+      "answer_c": "stringify()",
+      "answer_d": "parse()"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 35,
-    "Question": "What does the `:hover` pseudo-class do in CSS?",
-    "Answers": { 
-      "answer_a": "Applies styles when the mouse hovers over an element", 
-      "answer_b": "Applies styles when the element is clicked", 
-      "answer_c": "Applies styles when the element is focused", 
-      "answer_d": "Applies styles when the element is active"
+    "Question": "How to create a new array in JS?",
+    "Answers": {
+      "answer_a": "let arr = [];",
+      "answer_b": "let arr = ();",
+      "answer_c": "let arr = {}",
+      "answer_d": "let arr = new Array();"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 36,
-    "Question": "Which HTML element is used to define a list item?",
-    "Answers": { 
-      "answer_a": "<li>", 
-      "answer_b": "<item>", 
-      "answer_c": "<list-item>", 
-      "answer_d": "<ol-item>"
+    "Question": "How to define a route in Express?",
+    "Answers": {
+      "answer_a": "app.get('/path', handler);",
+      "answer_b": "app.route('/path', handler);",
+      "answer_c": "app.use('/path', handler);",
+      "answer_d": "app.request('/path', handler);"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 37,
-    "Question": "How do you add a comment in CSS?",
-    "Answers": { 
-      "answer_a": "/* This is a comment */", 
-      "answer_b": "// This is a comment", 
-      "answer_c": "<!-- This is a comment -->", 
-      "answer_d": "# This is a comment"
+    "Question": "How to install a package in Node.js?",
+    "Answers": {
+      "answer_a": "npm install package",
+      "answer_b": "node install package",
+      "answer_c": "require package",
+      "answer_d": "npm add package"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 38,
-    "Question": "What does the `display: none;` CSS property do?",
-    "Answers": { 
-      "answer_a": "Hides the element from the page", 
-      "answer_b": "Makes the element transparent", 
-      "answer_c": "Removes the element's border", 
-      "answer_d": "Collapses the element's margin"
+    "Question": "How to handle errors in Express?",
+    "Answers": {
+      "answer_a": "app.use((err, req, res, next) => {});",
+      "answer_b": "app.catch((err) => {});",
+      "answer_c": "app.error((err) => {});",
+      "answer_d": "app.on('error', (err) => {});"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 39,
-    "Question": "Which JavaScript method is used to get the length of an array?",
-    "Answers": { 
-      "answer_a": "length", 
-      "answer_b": "size()", 
-      "answer_c": "count()", 
-      "answer_d": "getLength()"
+    "Question": "What method to create a server in Node.js?",
+    "Answers": {
+      "answer_a": "http.createServer()",
+      "answer_b": "http.startServer()",
+      "answer_c": "server.create()",
+      "answer_d": "server.listen()"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 40,
-    "Question": "What HTML element is used to define a table cell?",
-    "Answers": { 
-      "answer_a": "<td>", 
-      "answer_b": "<cell>", 
-      "answer_c": "<tr>", 
-      "answer_d": "<table-cell>"
+    "Question": "How to add a style in HTML?",
+    "Answers": {
+      "answer_a": "<style> ... </style>",
+      "answer_b": "<css> ... </css>",
+      "answer_c": "<styles> ... </styles>",
+      "answer_d": "<link rel='stylesheet' ...>"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 41,
-    "Question": "Which CSS property is used to change the spacing between lines of text?",
-    "Answers": { 
-      "answer_a": "line-height", 
-      "answer_b": "letter-spacing", 
-      "answer_c": "word-spacing", 
-      "answer_d": "text-spacing"
+    "Question": "CSS property for text color?",
+    "Answers": {
+      "answer_a": "color:",
+      "answer_b": "text-color:",
+      "answer_c": "font-color:",
+      "answer_d": "background-color:"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 42,
-    "Question": "How do you specify an external stylesheet in HTML?",
-    "Answers": { 
-      "answer_a": "<link rel='stylesheet' href='styles.css'>", 
-      "answer_b": "<style src='styles.css'>", 
-      "answer_c": "<script href='styles.css'></script>", 
-      "answer_d": "<include href='styles.css'></include>"
+    "Question": "How to select by ID in CSS?",
+    "Answers": {
+      "answer_a": "#id {}",
+      "answer_b": ".id {}",
+      "answer_c": "id {}",
+      "answer_d": "id# {}"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 43,
-    "Question": "Which HTML element is used to define a header cell in a table?",
-    "Answers": { 
-      "answer_a": "<th>", 
-      "answer_b": "<td>", 
-      "answer_c": "<tr>", 
-      "answer_d": "<header>"
+    "Question": "How to use a variable in PHP?",
+    "Answers": {
+      "answer_a": "$var;",
+      "answer_b": "var $;",
+      "answer_c": "variable;",
+      "answer_d": "define $var;"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 44,
-    "Question": "What is the purpose of the `for` attribute in a <label> tag?",
-    "Answers": { 
-      "answer_a": "Associates the label with a specific form element", 
-      "answer_b": "Defines the label's font size", 
-      "answer_c": "Specifies the label's background color", 
-      "answer_d": "Sets the label's position"
+    "Question": "How to get POST data in PHP?",
+    "Answers": {
+      "answer_a": "$_POST['key']",
+      "answer_b": "$POST['key']",
+      "answer_c": "$get['key']",
+      "answer_d": "$request['key']"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 45,
-    "Question": "Which JavaScript method converts a string to lowercase?",
-    "Answers": { 
-      "answer_a": "toLowerCase()", 
-      "answer_b": "convertToLower()", 
-      "answer_c": "makeLower()", 
-      "answer_d": "stringLower()"
+    "Question": "How to redirect in PHP?",
+    "Answers": {
+      "answer_a": "header('Location: url');",
+      "answer_b": "redirect('url');",
+      "answer_c": "go('url');",
+      "answer_d": "location.href = 'url';"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 46,
-    "Question": "What is the default value of the `position` property in CSS?",
-    "Answers": { 
-      "answer_a": "static", 
-      "answer_b": "relative", 
-      "answer_c": "absolute", 
-      "answer_d": "fixed"
+    "Question": "How to use `require` in Node.js?",
+    "Answers": {
+      "answer_a": "const module = require('module');",
+      "answer_b": "import module from 'module';",
+      "answer_c": "load('module');",
+      "answer_d": "include 'module';"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 47,
-    "Question": "Which HTML tag is used to display a horizontal line?",
-    "Answers": { 
-      "answer_a": "<hr>", 
-      "answer_b": "<line>", 
-      "answer_c": "<horizontal>", 
-      "answer_d": "<divider>"
+    "Question": "How to handle a GET request in Express?",
+    "Answers": {
+      "answer_a": "app.get('/path', handler);",
+      "answer_b": "app.post('/path', handler);",
+      "answer_c": "app.use('/path', handler);",
+      "answer_d": "app.request('/path', handler);"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 48,
-    "Question": "What does the `text-transform` CSS property do?",
-    "Answers": { 
-      "answer_a": "Controls the capitalization of text", 
-      "answer_b": "Adjusts the text color", 
-      "answer_c": "Sets the text alignment", 
-      "answer_d": "Changes the text font"
+    "Question": "How to export a module in Node.js?",
+    "Answers": {
+      "answer_a": "module.exports = something;",
+      "answer_b": "export something;",
+      "answer_c": "exports.something = ...;",
+      "answer_d": "define module = ...;"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 49,
-    "Question": "How do you concatenate two strings in JavaScript?",
-    "Answers": { 
-      "answer_a": "string1 + string2", 
-      "answer_b": "string1.concat(string2)", 
-      "answer_c": "string1.append(string2)", 
-      "answer_d": "string1.join(string2)"
+    "Question": "How to parse form data in PHP?",
+    "Answers": {
+      "answer_a": "$_POST['field']",
+      "answer_b": "$field",
+      "answer_c": "parse('field')",
+      "answer_d": "$form['field']"
     },
     "correct_answer": "answer_a"
   },
   {
     "Qid": 50,
-    "Question": "Which HTML attribute specifies the URL of the page a link goes to?",
-    "Answers": { 
-      "answer_a": "href", 
-      "answer_b": "src", 
-      "answer_c": "link", 
-      "answer_d": "destination"
+    "Question": "How to make an API request in Node.js?",
+    "Answers": {
+      "answer_a": "fetch()",
+      "answer_b": "axios()",
+      "answer_c": "http.get()",
+      "answer_d": "request()"
     },
-    "correct_answer": "answer_a"
-  }]
+    "correct_answer": "answer_b"
+  }
+]
 
   module.exports = quest
