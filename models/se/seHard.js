@@ -1,223 +1,553 @@
 const quest = [
-    {
-      "Qid": 1,
-      "Question": "What is 'Aspect-Oriented Programming' (AOP) and how does it differ from Object-Oriented Programming (OOP)?",
-      "Answers": {
-        "answer_a": "AOP focuses on separating cross-cutting concerns through aspects, whereas OOP focuses on encapsulating data and behavior within objects.",
-        "answer_b": "AOP uses classes and inheritance while OOP uses interfaces and polymorphism.",
-        "answer_c": "AOP deals with algorithm optimization while OOP deals with user interface design.",
-        "answer_d": "AOP and OOP are similar methodologies without any significant differences."
-      },
-      "correct_answer": "answer_a"
+  {
+    "Qid": 1,
+    "Question": "What is the main purpose of a Dependency Injection (DI) container?",
+    "Answers": { 
+      "answer_a": "To manage database connections", 
+      "answer_b": "To provide object creation and management", 
+      "answer_c": "To handle application logging", 
+      "answer_d": "To facilitate UI updates"
     },
-    {
-      "Qid": 2,
-      "Question": "In the context of software architecture, what does 'CQRS' stand for and what problem does it address?",
-      "Answers": {
-        "answer_a": "Command Query Responsibility Segregation; it addresses the problem of separating read and write operations to optimize performance and scalability.",
-        "answer_b": "Centralized Query Response System; it addresses issues related to managing multiple queries in a centralized database.",
-        "answer_c": "Continuous Quality Review System; it addresses challenges in maintaining software quality over time.",
-        "answer_d": "Component Quality Requirements Specification; it addresses issues in defining component quality requirements."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 2,
+    "Question": "In UML, what does the '<<interface>>' stereotype denote?",
+    "Answers": { 
+      "answer_a": "A class with abstract methods", 
+      "answer_b": "A class that cannot be instantiated", 
+      "answer_c": "A class used for implementation", 
+      "answer_d": "A contract of methods to be implemented"
     },
-    {
-      "Qid": 3,
-      "Question": "What is 'Domain-Driven Design' (DDD) and what is its primary focus?",
-      "Answers": {
-        "answer_a": "DDD is an approach to software development that emphasizes collaboration with domain experts to create a shared understanding and model of the business domain.",
-        "answer_b": "DDD focuses on designing the user interface and experience based on user feedback.",
-        "answer_c": "DDD is a strategy for improving software performance by optimizing algorithms.",
-        "answer_d": "DDD involves using design patterns to structure code and ensure scalability."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_d"
+  },
+  {
+    "Qid": 3,
+    "Question": "Which design pattern is used to ensure that a class has only one instance and provides a global point of access to it?",
+    "Answers": { 
+      "answer_a": "Factory Method", 
+      "answer_b": "Singleton", 
+      "answer_c": "Observer", 
+      "answer_d": "Decorator"
     },
-    {
-      "Qid": 4,
-      "Question": "In software engineering, what does 'CAP Theorem' state and what are its key components?",
-      "Answers": {
-        "answer_a": "The CAP Theorem states that a distributed system cannot simultaneously guarantee Consistency, Availability, and Partition Tolerance. Key components are Consistency, Availability, and Partition Tolerance.",
-        "answer_b": "The CAP Theorem states that a system must achieve high performance, low cost, and ease of use. Key components are Performance, Cost, and Usability.",
-        "answer_c": "The CAP Theorem states that a system can only provide Consistency and Availability but not Partition Tolerance.",
-        "answer_d": "The CAP Theorem deals with the balance between Scalability and Security in distributed systems."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 4,
+    "Question": "What does the SOLID principle 'L' stand for?",
+    "Answers": { 
+      "answer_a": "Liskov Substitution Principle", 
+      "answer_b": "Least Privilege Principle", 
+      "answer_c": "Law of Demeter Principle", 
+      "answer_d": "Low Coupling Principle"
     },
-    {
-      "Qid": 5,
-      "Question": "What is 'Event Sourcing' and how does it differ from traditional CRUD operations?",
-      "Answers": {
-        "answer_a": "Event Sourcing is a pattern where state changes are stored as a sequence of events. It differs from CRUD operations which directly modify the current state of the data.",
-        "answer_b": "Event Sourcing focuses on generating events for UI updates, whereas CRUD operations focus on managing backend data.",
-        "answer_c": "Event Sourcing involves continuous integration of data, while CRUD focuses on manual data entry.",
-        "answer_d": "Event Sourcing is used to optimize database queries, whereas CRUD is used for user authentication."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 5,
+    "Question": "In the context of software testing, what is a 'Mock' object used for?",
+    "Answers": { 
+      "answer_a": "To simulate the behavior of real objects", 
+      "answer_b": "To replace the actual database", 
+      "answer_c": "To record user interactions", 
+      "answer_d": "To track performance metrics"
     },
-    {
-      "Qid": 6,
-      "Question": "In the context of software testing, what is 'Mutation Testing' and what does it aim to achieve?",
-      "Answers": {
-        "answer_a": "Mutation Testing involves making small changes to the code to ensure that test cases can detect these changes, aiming to evaluate the effectiveness of the test suite.",
-        "answer_b": "Mutation Testing focuses on optimizing code performance by altering its logic.",
-        "answer_c": "Mutation Testing involves creating new test cases based on code mutations.",
-        "answer_d": "Mutation Testing is used to manage software versions and dependencies."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 6,
+    "Question": "Which diagram in UML is used to represent the dynamic behavior of a system?",
+    "Answers": { 
+      "answer_a": "Class Diagram", 
+      "answer_b": "Use Case Diagram", 
+      "answer_c": "Sequence Diagram", 
+      "answer_d": "Component Diagram"
     },
-    {
-      "Qid": 7,
-      "Question": "What is 'Service-Oriented Architecture' (SOA) and how does it differ from 'Microservices Architecture'?",
-      "Answers": {
-        "answer_a": "SOA is an architecture pattern where services are designed to communicate over a network. Microservices are a subset of SOA that emphasizes small, independently deployable services.",
-        "answer_b": "SOA involves a monolithic approach to software design, while Microservices involve a distributed approach.",
-        "answer_c": "SOA focuses on database optimization, whereas Microservices focus on user interface design.",
-        "answer_d": "SOA uses a centralized architecture, while Microservices use a peer-to-peer network."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_c"
+  },
+  {
+    "Qid": 7,
+    "Question": "In a relational database, what is a 'foreign key'?",
+    "Answers": { 
+      "answer_a": "A key that uniquely identifies a record", 
+      "answer_b": "A key that establishes a relationship between tables", 
+      "answer_c": "A key that encrypts data", 
+      "answer_d": "A key that indexes records"
     },
-    {
-      "Qid": 8,
-      "Question": "In software engineering, what is 'Concurrency Control' and why is it important?",
-      "Answers": {
-        "answer_a": "Concurrency Control is a technique to manage simultaneous operations on shared data to ensure data consistency and prevent conflicts.",
-        "answer_b": "Concurrency Control is used to manage the performance of individual threads in an application.",
-        "answer_c": "Concurrency Control deals with the security of software applications.",
-        "answer_d": "Concurrency Control is a method for optimizing database queries."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 8,
+    "Question": "What does the 'KISS' principle stand for in software engineering?",
+    "Answers": { 
+      "answer_a": "Keep It Simple, Stupid", 
+      "answer_b": "Keep It Secure, Stupid", 
+      "answer_c": "Keep It Structured, Simple", 
+      "answer_d": "Keep It Systematic, Simple"
     },
-    {
-      "Qid": 9,
-      "Question": "What does 'Homomorphic Encryption' enable in the context of data processing?",
-      "Answers": {
-        "answer_a": "Homomorphic Encryption allows computations to be performed on encrypted data without needing to decrypt it first, preserving privacy.",
-        "answer_b": "Homomorphic Encryption provides a mechanism for real-time data synchronization across multiple databases.",
-        "answer_c": "Homomorphic Encryption is used to compress data for faster transmission.",
-        "answer_d": "Homomorphic Encryption ensures that data can only be accessed by authorized users."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 9,
+    "Question": "Which testing level focuses on the integration of components or systems?",
+    "Answers": { 
+      "answer_a": "Unit Testing", 
+      "answer_b": "Integration Testing", 
+      "answer_c": "System Testing", 
+      "answer_d": "Acceptance Testing"
     },
-    {
-      "Qid": 10,
-      "Question": "What is the 'Observer Pattern' and in what scenarios is it commonly used?",
-      "Answers": {
-        "answer_a": "The Observer Pattern is a behavioral design pattern where an object (subject) maintains a list of dependents (observers) that are notified of any state changes. It's used for implementing distributed event-handling systems.",
-        "answer_b": "The Observer Pattern is used for managing database transactions and ensuring data consistency.",
-        "answer_c": "The Observer Pattern focuses on optimizing algorithm performance in software.",
-        "answer_d": "The Observer Pattern deals with the creation of user interface components in software."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 10,
+    "Question": "In a microservices architecture, what is the primary role of a service registry?",
+    "Answers": { 
+      "answer_a": "To manage user authentication", 
+      "answer_b": "To register and locate services", 
+      "answer_c": "To cache data", 
+      "answer_d": "To log service requests"
     },
-    {
-      "Qid": 11,
-      "Question": "What does 'NoSQL' stand for and what are its primary characteristics?",
-      "Answers": {
-        "answer_a": "NoSQL stands for 'Not Only SQL'. It is characterized by non-relational data models, horizontal scaling, and flexibility in schema design.",
-        "answer_b": "NoSQL stands for 'Non-Structured Query Language'. It focuses on relational database management and fixed schemas.",
-        "answer_c": "NoSQL is an extension of SQL designed for complex transactions.",
-        "answer_d": "NoSQL refers to traditional SQL databases with no support for large-scale data processing."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 11,
+    "Question": "Which version control system uses a distributed model?",
+    "Answers": { 
+      "answer_a": "Git", 
+      "answer_b": "Subversion", 
+      "answer_c": "Mercurial", 
+      "answer_d": "Perforce"
     },
-    {
-      "Qid": 12,
-      "Question": "What is 'Dependency Injection' and how does it benefit software design?",
-      "Answers": {
-        "answer_a": "Dependency Injection is a design pattern where an object receives its dependencies from an external source rather than creating them internally. It benefits software design by promoting loose coupling and enhancing testability.",
-        "answer_b": "Dependency Injection involves injecting code into a software application to handle complex algorithms.",
-        "answer_c": "Dependency Injection is used for managing user access and permissions in software systems.",
-        "answer_d": "Dependency Injection is a technique for optimizing database performance."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 12,
+    "Question": "What does the acronym 'REST' stand for in web services?",
+    "Answers": { 
+      "answer_a": "Representational State Transfer", 
+      "answer_b": "Relational State Transfer", 
+      "answer_c": "Resource State Transfer", 
+      "answer_d": "Remote State Transfer"
     },
-    {
-      "Qid": 13,
-      "Question": "In the context of distributed systems, what is 'Eventual Consistency'?",
-      "Answers": {
-        "answer_a": "Eventual Consistency is a consistency model where updates to a distributed system will eventually propagate to all nodes, but may not be immediately consistent.",
-        "answer_b": "Eventual Consistency ensures that data is always consistent across all nodes in real-time.",
-        "answer_c": "Eventual Consistency focuses on optimizing database query performance.",
-        "answer_d": "Eventual Consistency is a technique for managing user sessions in distributed systems."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 13,
+    "Question": "What is the primary function of a 'Facade' pattern?",
+    "Answers": { 
+      "answer_a": "To provide a unified interface to a set of interfaces", 
+      "answer_b": "To allow objects to change state", 
+      "answer_c": "To simplify object creation", 
+      "answer_d": "To manage object lifecycle"
     },
-    {
-      "Qid": 14,
-      "Question": "What is 'Algorithmic Complexity' and how is it measured?",
-      "Answers": {
-        "answer_a": "Algorithmic Complexity, also known as time complexity, measures the efficiency of an algorithm in terms of the amount of computational resources it requires, usually expressed using Big O notation.",
-        "answer_b": "Algorithmic Complexity refers to the hardware resources needed to run an algorithm.",
-        "answer_c": "Algorithmic Complexity measures the user interface design of an algorithm.",
-        "answer_d": "Algorithmic Complexity deals with the number of lines of code in an algorithm."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 14,
+    "Question": "In software design, what does the term 'Coupling' refer to?",
+    "Answers": { 
+      "answer_a": "The degree of dependency between modules", 
+      "answer_b": "The number of methods in a class", 
+      "answer_c": "The complexity of a function", 
+      "answer_d": "The number of classes in a system"
     },
-    {
-      "Qid": 15,
-      "Question": "What is the 'Chain of Responsibility' pattern and how does it operate?",
-      "Answers": {
-        "answer_a": "The Chain of Responsibility pattern is a behavioral design pattern where a chain of handler objects pass a request along until one of them handles it. It helps in decoupling request senders from receivers.",
-        "answer_b": "The Chain of Responsibility pattern involves creating a sequence of database transactions.",
-        "answer_c": "The Chain of Responsibility pattern is used to manage user authentication and authorization.",
-        "answer_d": "The Chain of Responsibility pattern optimizes performance in software algorithms."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 15,
+    "Question": "Which of the following is NOT a principle of the Agile Manifesto?",
+    "Answers": { 
+      "answer_a": "Working software over comprehensive documentation", 
+      "answer_b": "Customer collaboration over contract negotiation", 
+      "answer_c": "Responding to change over following a plan", 
+      "answer_d": "Following a plan over responding to change"
     },
-    {
-      "Qid": 16,
-      "Question": "What is 'Backpropagation' in the context of neural networks and how does it work?",
-      "Answers": {
-        "answer_a": "Backpropagation is an algorithm used for training neural networks by calculating the gradient of the loss function with respect to each weight by the chain rule, updating weights to minimize error.",
-        "answer_b": "Backpropagation is a technique for managing data consistency across distributed systems.",
-        "answer_c": "Backpropagation refers to the process of deploying neural network models to production.",
-        "answer_d": "Backpropagation is used for optimizing database queries and performance."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_d"
+  },
+  {
+    "Qid": 16,
+    "Question": "In a class diagram, what does an arrow with a solid line and a triangle head indicate?",
+    "Answers": { 
+      "answer_a": "Association", 
+      "answer_b": "Generalization", 
+      "answer_c": "Dependency", 
+      "answer_d": "Realization"
     },
-    {
-      "Qid": 17,
-      "Question": "What is the 'Decorator Pattern' and when would you use it?",
-      "Answers": {
-        "answer_a": "The Decorator Pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It is used to extend functionalities of objects in a flexible and reusable way.",
-        "answer_b": "The Decorator Pattern involves adding new components to a software application.",
-        "answer_c": "The Decorator Pattern is used for optimizing code performance through code refactoring.",
-        "answer_d": "The Decorator Pattern is a method for creating new database schemas."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 17,
+    "Question": "What does 'CAP' theorem stand for in distributed systems?",
+    "Answers": { 
+      "answer_a": "Consistency, Availability, Partition Tolerance", 
+      "answer_b": "Consistency, Accuracy, Performance", 
+      "answer_c": "Capacity, Availability, Partitioning", 
+      "answer_d": "Consistency, Affordability, Performance"
     },
-    {
-      "Qid": 18,
-      "Question": "What is 'Fault Tolerance' in distributed systems and how is it achieved?",
-      "Answers": {
-        "answer_a": "Fault Tolerance is the ability of a system to continue operating correctly even when some of its components fail. It is achieved through redundancy, error detection, and recovery mechanisms.",
-        "answer_b": "Fault Tolerance refers to the ability to optimize system performance by scaling horizontally.",
-        "answer_c": "Fault Tolerance is used to ensure data security and encryption.",
-        "answer_d": "Fault Tolerance involves managing user access and permissions."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 18,
+    "Question": "Which protocol is commonly used for secure web communication?",
+    "Answers": { 
+      "answer_a": "HTTP", 
+      "answer_b": "FTP", 
+      "answer_c": "SSH", 
+      "answer_d": "HTTPS"
     },
-    {
-      "Qid": 19,
-      "Question": "What is 'Big Data' and how does it differ from traditional data processing?",
-      "Answers": {
-        "answer_a": "Big Data refers to extremely large datasets that cannot be processed using traditional data processing tools due to their volume, velocity, and variety. It requires specialized technologies for storage, processing, and analysis.",
-        "answer_b": "Big Data is a term used for optimizing small datasets for performance improvements.",
-        "answer_c": "Big Data involves traditional relational database management systems for data processing.",
-        "answer_d": "Big Data focuses on manual data entry and data cleaning processes."
-      },
-      "correct_answer": "answer_a"
+    "correct_answer": "answer_d"
+  },
+  {
+    "Qid": 19,
+    "Question": "What is the role of the 'Observer' pattern in software design?",
+    "Answers": { 
+      "answer_a": "To create objects without specifying their concrete classes", 
+      "answer_b": "To allow objects to observe and react to changes in other objects", 
+      "answer_c": "To manage the state of objects", 
+      "answer_d": "To encapsulate the algorithm"
     },
-    {
-      "Qid": 20,
-      "Question": "What is 'Data Warehousing' and how does it support business intelligence?",
-      "Answers": {
-        "answer_a": "Data Warehousing involves collecting and managing data from various sources into a central repository, which supports business intelligence by enabling complex queries and analytics for decision-making.",
-        "answer_b": "Data Warehousing focuses on real-time data synchronization across multiple databases.",
-        "answer_c": "Data Warehousing is used for creating user interface components in software systems.",
-        "answer_d": "Data Warehousing deals with the optimization of database query performance."
-      },
-      "correct_answer": "answer_a"
-    }
-  ]
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 20,
+    "Question": "What is a primary benefit of using a 'Message Broker' in microservices architecture?",
+    "Answers": { 
+      "answer_a": "To handle data storage", 
+      "answer_b": "To enable communication between services", 
+      "answer_c": "To perform load balancing", 
+      "answer_d": "To manage user sessions"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 21,
+    "Question": "What does 'CI/CD' stand for in software development?",
+    "Answers": { 
+      "answer_a": "Continuous Integration/Continuous Deployment", 
+      "answer_b": "Continuous Improvement/Continuous Delivery", 
+      "answer_c": "Controlled Integration/Controlled Deployment", 
+      "answer_d": "Constant Integration/Constant Delivery"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 22,
+    "Question": "In UML, what is the purpose of a 'Use Case' diagram?",
+    "Answers": { 
+      "answer_a": "To show the static structure of the system", 
+      "answer_b": "To describe the interactions between actors and the system", 
+      "answer_c": "To model the behavior of objects", 
+      "answer_d": "To illustrate the flow of data"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 23,
+    "Question": "Which of the following is NOT a typical feature of a NoSQL database?",
+    "Answers": { 
+      "answer_a": "Schema-less design", 
+      "answer_b": "Horizontal scaling", 
+      "answer_c": "ACID transactions", 
+      "answer_d": "Document-based storage"
+    },
+    "correct_answer": "answer_c"
+  },
+  {
+    "Qid": 24,
+    "Question": "What does 'BDD' stand for in software testing?",
+    "Answers": { 
+      "answer_a": "Behavior-Driven Development", 
+      "answer_b": "Binary-Driven Design", 
+      "answer_c": "Baseline-Driven Development", 
+      "answer_d": "Behavior-Defined Design"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 25,
+    "Question": "What is the main purpose of the 'Chain of Responsibility' pattern?",
+    "Answers": { 
+      "answer_a": "To pass a request along a chain of handlers", 
+      "answer_b": "To create a chain of objects for efficient data processing", 
+      "answer_c": "To ensure a single handler processes the request", 
+      "answer_d": "To chain multiple methods together"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 26,
+    "Question": "In database normalization, what is the purpose of achieving 3NF (Third Normal Form)?",
+    "Answers": { 
+      "answer_a": "To eliminate duplicate columns", 
+      "answer_b": "To ensure data is only stored in one place", 
+      "answer_c": "To remove columns that are not dependent on the primary key", 
+      "answer_d": "To remove transitive dependencies"
+    },
+    "correct_answer": "answer_d"
+  },
+  {
+    "Qid": 27,
+    "Question": "What does 'ORM' stand for in the context of database management?",
+    "Answers": { 
+      "answer_a": "Object-Relational Mapping", 
+      "answer_b": "Object-Relative Management", 
+      "answer_c": "Operational Resource Management", 
+      "answer_d": "Object-Relational Modeling"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 28,
+    "Question": "Which testing approach involves testing the entire system as a whole?",
+    "Answers": { 
+      "answer_a": "Unit Testing", 
+      "answer_b": "Integration Testing", 
+      "answer_c": "System Testing", 
+      "answer_d": "Acceptance Testing"
+    },
+    "correct_answer": "answer_c"
+  },
+  {
+    "Qid": 29,
+    "Question": "In a UML activity diagram, what does a diamond shape represent?",
+    "Answers": { 
+      "answer_a": "Action state", 
+      "answer_b": "Decision point", 
+      "answer_c": "Start node", 
+      "answer_d": "End node"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 30,
+    "Question": "What is the primary goal of 'Continuous Integration'?",
+    "Answers": { 
+      "answer_a": "To continuously improve user experience", 
+      "answer_b": "To integrate code changes frequently and automatically", 
+      "answer_c": "To ensure continuous application availability", 
+      "answer_d": "To monitor continuous performance metrics"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 31,
+    "Question": "Which type of testing focuses on the software’s performance under load?",
+    "Answers": { 
+      "answer_a": "Functional Testing", 
+      "answer_b": "Regression Testing", 
+      "answer_c": "Load Testing", 
+      "answer_d": "User Acceptance Testing"
+    },
+    "correct_answer": "answer_c"
+  },
+  {
+    "Qid": 32,
+    "Question": "What is a 'State Machine' diagram used to model in UML?",
+    "Answers": { 
+      "answer_a": "The system's dynamic behavior", 
+      "answer_b": "The static structure of the system", 
+      "answer_c": "The flow of control among use cases", 
+      "answer_d": "The interaction between objects"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 33,
+    "Question": "What is the purpose of 'A/B Testing' in software development?",
+    "Answers": { 
+      "answer_a": "To compare two versions of a feature to determine which performs better", 
+      "answer_b": "To test the application on two different operating systems", 
+      "answer_c": "To perform stress testing on two servers", 
+      "answer_d": "To ensure compatibility between two versions of the database"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 34,
+    "Question": "In a microservices architecture, what does 'Service Discovery' involve?",
+    "Answers": { 
+      "answer_a": "Locating and identifying services dynamically", 
+      "answer_b": "Monitoring the health of services", 
+      "answer_c": "Managing service configurations", 
+      "answer_d": "Logging service interactions"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 35,
+    "Question": "What does 'CQRS' stand for in software design?",
+    "Answers": { 
+      "answer_a": "Command Query Responsibility Segregation", 
+      "answer_b": "Command Query Reuse Strategy", 
+      "answer_c": "Command Query Read Synchronization", 
+      "answer_d": "Command Quality Review System"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 36,
+    "Question": "In software design, what does 'Separation of Concerns' mean?",
+    "Answers": { 
+      "answer_a": "Dividing a system into distinct features with minimal overlap", 
+      "answer_b": "Combining multiple concerns into a single component", 
+      "answer_c": "Focusing on one concern at a time during development", 
+      "answer_d": "Eliminating concerns to simplify design"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 37,
+    "Question": "In software engineering, what is a 'Design Pattern'?",
+    "Answers": { 
+      "answer_a": "A reusable solution to a common problem in software design", 
+      "answer_b": "A set of guidelines for coding standards", 
+      "answer_c": "A tool for automating design processes", 
+      "answer_d": "A specific implementation of a software feature"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 38,
+    "Question": "Which software development methodology focuses on iterative and incremental development with frequent delivery of working software?",
+    "Answers": { 
+      "answer_a": "Waterfall", 
+      "answer_b": "Scrum", 
+      "answer_c": "V-Model", 
+      "answer_d": "Spiral"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 39,
+    "Question": "What is the role of a 'Service Mesh' in microservices architecture?",
+    "Answers": { 
+      "answer_a": "To handle service-to-service communication", 
+      "answer_b": "To store service configurations", 
+      "answer_c": "To provide user authentication", 
+      "answer_d": "To monitor service performance"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 40,
+    "Question": "Which principle of software design emphasizes that changes in one module should not require changes in other modules?",
+    "Answers": { 
+      "answer_a": "Single Responsibility Principle", 
+      "answer_b": "Open/Closed Principle", 
+      "answer_c": "Liskov Substitution Principle", 
+      "answer_d": "Dependency Inversion Principle"
+    },
+    "correct_answer": "answerb"
+  },
+  {
+    "Qid": 41,
+    "Question": "In the context of Agile, what is a 'Sprint Retrospective'?",
+    "Answers": { 
+      "answer_a": "A meeting to plan the next sprint", 
+      "answer_b": "A review of the completed sprint to improve processes", 
+      "answer_c": "A discussion of project goals", 
+      "answer_d": "A session to prioritize the backlog"
+    },
+    "correct_answer": "answer_b"
+  },
+  {
+    "Qid": 42,
+    "Question": "Which of the following is a characteristic of 'Event-Driven Architecture'?",
+    "Answers": { 
+      "answer_a": "Components react to events or messages", 
+      "answer_b": "Components communicate through a central repository", 
+      "answer_c": "Components are tightly coupled", 
+      "answer_d": "Components share a common database"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 43,
+    "Question": "What does 'SLA' stand for in the context of service management?",
+    "Answers": { 
+      "answer_a": "Service Level Agreement", 
+      "answer_b": "Service Load Analysis", 
+      "answer_c": "Service Level Assessment", 
+      "answer_d": "Service Lifecycle Agreement"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 44,
+    "Question": "In software design, what is 'Inversion of Control' (IoC)?",
+    "Answers": { 
+      "answer_a": "A design principle where the flow of control is inverted", 
+      "answer_b": "A method for controlling concurrent processes", 
+      "answer_c": "A pattern for managing user interactions", 
+      "answer_d": "A technique for enhancing system performance"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 45,
+    "Question": "What is the purpose of a 'Version Control System' (VCS)?",
+    "Answers": { 
+      "answer_a": "To track changes in source code", 
+      "answer_b": "To manage software releases", 
+      "answer_c": "To monitor system performance", 
+      "answer_d": "To handle user authentication"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 46,
+    "Question": "Which of the following is a benefit of using 'Microservices' over a monolithic architecture?",
+    "Answers": { 
+      "answer_a": "Improved scalability and flexibility", 
+      "answer_b": "Simpler codebase management", 
+      "answer_c": "Reduced network overhead", 
+      "answer_d": "Faster development cycles"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 47,
+    "Question": "In UML, what is the purpose of an 'Object Diagram'?",
+    "Answers": { 
+      "answer_a": "To show object instances and their relationships at a specific point in time", 
+      "answer_b": "To represent the sequence of operations", 
+      "answer_c": "To illustrate the static structure of the system", 
+      "answer_d": "To detail the system's interactions"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 48,
+    "Question": "What is the primary goal of 'Load Balancing' in a distributed system?",
+    "Answers": { 
+      "answer_a": "To distribute network traffic across multiple servers", 
+      "answer_b": "To balance computational load within a single server", 
+      "answer_c": "To manage database connections", 
+      "answer_d": "To optimize storage utilization"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 49,
+    "Question": "In a class diagram, what does a dashed line with an open arrowhead denote?",
+    "Answers": { 
+      "answer_a": "Dependency", 
+      "answer_b": "Association", 
+      "answer_c": "Generalization", 
+      "answer_d": "Realization"
+    },
+    "correct_answer": "answer_a"
+  },
+  {
+    "Qid": 50,
+    "Question": "What is the purpose of 'Asynchronous Programming'?",
+    "Answers": { 
+      "answer_a": "To allow programs to perform tasks concurrently", 
+      "answer_b": "To synchronize multiple processes", 
+      "answer_c": "To optimize memory usage", 
+      "answer_d": "To simplify code execution"
+    },
+    "correct_answer": "answer_a"
+  }
+]
   module.exports = quest

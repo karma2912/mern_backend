@@ -1,17 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const sequestion = require('../models/se/sequestions')
-const seMquestion = require("../models/se/seMquestions"); 
-const seHquestion = require("../models/se/seHquestions"); 
-const questions = require("../models/se/seEasy.js")
-const Mquestions = require("../models/se/seModerate.js")
-const Hquestions = require("../models/se/seHard.js")
+const amquestion = require('../models/am/amquestions')
+const amMquestion = require('../models/am/amMquestions')
+const amHquestion = require('../models/am/amHquestions')
+const amEasy = require('../models/am/amEasy')
+const amModerate = require('../models/am/amModerate')
+const amHard = require('../models/am/amHard')
 
-//WP EASY QUESTIONS
-router.post("/sequestion",async (req,res)=>{
+//am EASY QUESTIONS
+router.post("/amquestion",async (req,res)=>{
    try {
-    
-       let Question = await sequestion.insertMany(questions)
+       let Question = await amquestion.insertMany(amEasy)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
@@ -19,31 +18,9 @@ router.post("/sequestion",async (req,res)=>{
    }
 })
 
-router.get("/getseEquestion",async (req,res)=>{
+router.get("/getamEquestion",async (req,res)=>{
    try {
-       let Question = await sequestion.find({})
-       res.send(Question)
-       
-   } catch (error) {
-       console.log(error.message)
-       res.status(500).json({message:error.message})
-   }
-})
-
-//WP MODERATE QUESTIONS
-router.post("/seMquestion",async (req,res)=>{
-   try {
-    let Question = await seMquestion.insertMany(Mquestions)
-       res.send(Question)
-   } catch (error) {
-       console.log(error.message)
-       res.status(500).json({message:error.message})
-   }
-})
-
-router.get("/getseMquestion",async (req,res)=>{
-   try {
-       let Question = await seMquestion.find({})
+       let Question = await amquestion.find({})
        res.send(Question)
        
    } catch (error) {
@@ -52,10 +29,10 @@ router.get("/getseMquestion",async (req,res)=>{
    }
 })
 
-//WP Hard QUESTIONS
-router.post("/seHquestion",async (req,res)=>{
+//am MODERATE QUESTIONS
+router.post("/amMquestion",async (req,res)=>{
    try {
-       let Question = await seHquestion.insertMany(Hquestions)
+       let Question = await amMquestion.insertMany(amModerate)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
@@ -63,9 +40,31 @@ router.post("/seHquestion",async (req,res)=>{
    }
 })
 
-router.get("/getseHquestion",async (req,res)=>{
+router.get("/getamMquestion",async (req,res)=>{
    try {
-       let Question = await seHquestion.find({})
+       let Question = await amMquestion.find({})
+       res.send(Question)
+       
+   } catch (error) {
+       console.log(error.message)
+       res.status(500).json({message:error.message})
+   }
+})
+
+//am Hard QUESTIONS
+router.post("/amHquestion",async (req,res)=>{
+   try {
+       let Question = await amHquestion.insertMany(amHard)
+       res.send(Question)
+   } catch (error) {
+       console.log(error.message)
+       res.status(500).json({message:error.message})
+   }
+})
+
+router.get("/getamHquestion",async (req,res)=>{
+   try {
+       let Question = await amHquestion.find({})
        res.send(Question)
        
    } catch (error) {

@@ -11,11 +11,13 @@ const authRoutes = require('./routes/auth.js')
 const wpRoutes = require('./routes/questions.js')
 const seRoutes = require('./routes/sequestions.js')
 const dbRoutes = require('./routes/dbquestions.js')
+const amRoutes = require('./routes/amquestions.js')
 const resultRoutes = require('./routes/results.js')
 app.use("/auth",authRoutes)
 app.use("/api",wpRoutes)
 app.use("/api",seRoutes)
 app.use("/api",dbRoutes)
+app.use("/api",amRoutes)
 app.use('/results',resultRoutes)
 
 app.get("/",(req,res)=>{

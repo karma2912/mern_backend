@@ -3,11 +3,13 @@ const router = express.Router()
 const dbquestion = require('../models/db/dbquestions')
 const dbMquestion = require("../models/db/dbMquestions"); 
 const dbHquestion = require("../models/db/dbHquestions"); 
-
+const dbEasy = require("../models/db/dbEasy")
+const dbHard = require("../models/db/dbHard")
+const dbModerate = require("../models/db/dbModerate")
 //db EASY QUESTIONS
 router.post("/dbquestion",async (req,res)=>{
    try {
-       let Question = await dbquestion.create(req.body)
+       let Question = await dbquestion.insertMany(dbEasy)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
@@ -29,7 +31,7 @@ router.get("/getdbEquestion",async (req,res)=>{
 //db MODERATE QUESTIONS
 router.post("/dbMquestion",async (req,res)=>{
    try {
-       let Question = await dbMquestion.create(req.body)
+       let Question = await dbMquestion.insertMany(dbModerate)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
@@ -51,7 +53,7 @@ router.get("/getdbMquestion",async (req,res)=>{
 //db Hard QUESTIONS
 router.post("/dbHquestion",async (req,res)=>{
    try {
-       let Question = await dbHquestion.create(req.body)
+       let Question = await dbHquestion.insertMany(dbHard)
        res.send(Question)
    } catch (error) {
        console.log(error.message)
