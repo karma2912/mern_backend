@@ -34,4 +34,15 @@ router.get("/getresults", fetchUser, async (req, res) => {
   }
 });
 
+router.get('/delresults',async(req,res)=>{
+  try{
+    const deleteResult = await Results.deleteMany({})
+    res.json("All Results has been deleted",deleteResult)
+  }
+  catch(error){
+    console.error(error.message)
+    res.status(500).send("Errorrrrrr")
+  }
+})
+
 module.exports = router;

@@ -13,6 +13,7 @@ const seRoutes = require('./routes/sequestions.js')
 const dbRoutes = require('./routes/dbquestions.js')
 const amRoutes = require('./routes/amquestions.js')
 const resultRoutes = require('./routes/results.js')
+
 app.use("/auth",authRoutes)
 app.use("/api",wpRoutes)
 app.use("/api",seRoutes)
