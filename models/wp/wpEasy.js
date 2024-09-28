@@ -47,12 +47,12 @@ const quest = [
     "Qid": 5,
     "Question": "Attribute for image description?",
     "Answers": {
-      "answer_a": "alt",
+      "answer_a": "text",
       "answer_b": "title",
       "answer_c": "desc",
-      "answer_d": "text"
+      "answer_d": "alt"
     },
-    "correct_answer": "answer_a"
+    "correct_answer": "answer_d"
   },
   {
     "Qid": 6,
