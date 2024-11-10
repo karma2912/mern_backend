@@ -54,7 +54,7 @@ router.post ("/registeruser" , [
    ], async (req,res)=>{
          const errors = validationResult(req);
          if (!errors.isEmpty()) {
-            return res.send("User doesn't exists")
+            return res.send("User doesn't existss")
          }
       // Accessing the stored user data in the database
       const {email,password} = req.body
